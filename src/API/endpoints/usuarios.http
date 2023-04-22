@@ -1,0 +1,54 @@
+@API = http://localhost:3000
+
+### Get All Users
+GET {{API}}/usuarios HTTP/1.1
+Content-Type: application/json
+
+
+### Login
+POST http://localhost:3000/api2/login HTTP/1.1
+Content-Type: application/json
+
+{  
+    "email": "arieldominguez01@hotmail.com",
+    "password": "Ariel"
+}
+
+
+### Get Single User
+GET http://localhost:3000/api_v2/usuarios HTTP/1.1
+Content-Type: application/json
+
+### Get List Users 
+GET http://localhost:3001/api/usuarios/listar HTTP/1.1
+Content-Type: application/json
+
+### Create User
+POST http://localhost:3001/api/usuarios HTTP/1.1
+Content-Type: application/json
+
+{  
+    "nombre": "Ariel Leopoldo",
+    "apellido": "Dominguez",
+    "email": "arieldominguez01@hotmail.com",
+    "password": "Ariel"
+}
+
+### Update User
+PUT http://localhost:3001/api/usuarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_usuario" : 115,
+    "nombre" : "Ariel Leopoldo",
+    "apellido" : "Dominguez",
+    "rol": "Administrador"
+}
+
+### Delete Users
+DELETE  http://localhost:3001/api/usuarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_usuario" : 90
+}
